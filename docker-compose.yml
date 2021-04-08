@@ -2,7 +2,8 @@ version: '3'
 
 services:
   webapp:
-    build: ./webapp/
+    build:
+      context: ./webapp/
     ports:
       - "5000:5000"
     volumes:
@@ -12,6 +13,8 @@ services:
       - ./env_files/.postgres.env
     networks:
       - backend
+    depends_on:
+      - postgres
       
   postgres:
     image: postgres:9.6
