@@ -1,0 +1,2 @@
+CREATE DATABASE webapp;
+CREATE DATABASE testdb;
