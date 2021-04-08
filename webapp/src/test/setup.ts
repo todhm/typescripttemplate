@@ -37,8 +37,6 @@ const cleanAll = async(connection: Connection)=>{
 let db: any;
 beforeAll(async()=>{
     await dbCreateConnection(testSettings.dbConfig);
-    const mainConnection = getConnection();
-    await mainConnection.runMigrations();
 });
 
 beforeEach(async()=>{
