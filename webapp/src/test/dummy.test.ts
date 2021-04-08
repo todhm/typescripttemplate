@@ -1,7 +1,7 @@
 import request from 'supertest';
-import app from '../index';
 import { getRepository } from 'typeorm';
 import { Dummy } from '../models/entities/dummy';
+import app from '../app';
 
 it('dummy crreation success', async()=>{
     const response = await request(app)
